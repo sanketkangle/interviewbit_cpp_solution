@@ -1,0 +1,16 @@
+int Solution::gcd(int A, int B) {
+    int temp;
+    if (A == 0)return B;
+    if (B==0) return A;
+    while(true){
+        if (A>B){
+            A = (A+B) - (B=A);
+        }
+        if (B%A == 0)return A;
+        else{
+            temp = A;
+            A = B%A;
+            B = temp;
+        }
+    }
+}
